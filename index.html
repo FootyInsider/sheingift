@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheingift</title>
+  <link rel="shortcut icon" href="shein.png" type="image/x-icon">
+  <script src="./tailwindcdn.js"></script>
+  <script>
+    // Countdown Timer
+    document.addEventListener("DOMContentLoaded", () => {
+      const countdown = document.getElementById("countdown");
+      const endTime = new Date().getTime() + 60 * 60 * 1000; // 1 hour from now
+      const updateTimer = () => {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        if (distance <= 0) {
+          countdown.innerText = "Offer expired!";
+          return;
+        }
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        countdown.innerText = `${hours}h ${minutes}m ${seconds}s left!`;
+      };
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
+  </script>
+
+  <style>
+    body {
+      background-color: #fff;
+      color: #111;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a.button-hover {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with SHEIN Logo -->
+  <header class="bg-white p-4 flex justify-center items-center">
+    <img src="shein.png" alt="SHEIN Logo" width="10%" style="border-radius: 7px;">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
+    <h1 class="text-4xl md:text-5xl font-bold mt-3 mb-4" style="color:#000000">
+      Earn Money by Reviewing Shein Products
+    </h1>
+    <p class="text-lg mb-2 max-w-xl font-bold" style="color:#333333">
+      Get paid up to $750 by completing simple product reviews on Shein items.
+    </p>
+    <p id="countdown" class="font-bold text-lg mb-6">Loading...</p>
+    <a id="review-link"
+      href="https://uplevelrewarded.com/aff_c?offer_id=76&aff_id=158919"
+      class="text-white px-6 py-3 rounded-full mb-5 font-semibold button-hover"
+      style="background:#000000">
+      Apply Now
+    </a>
+  </section>
+
+  <!-- Steps Section -->
+  <section class="py-5 px-6 bg-white text-center">
+    <h2 class="text-3xl font-semibold mb-8" style="color:#000000">How It Works</h2>
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 step">
+        <h3 class="text-xl font-bold mb-2">Step 1</h3>
+        <p>Click "Apply Now" to get started.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 step">
+        <h3 class="text-xl font-bold mb-2">Step 2</h3>
+        <p>Submit your basic information.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 step">
+        <h3 class="text-xl font-bold mb-2">Step 3</h3>
+        <p>Complete at least 3-5 recommended deals.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 step">
+        <h3 class="text-xl font-bold mb-2">Step 4</h3>
+        <p>Receive your reward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-10 px-6 bg-white text-center">
+    <h2 class="text-3xl font-semibold mb-5" style="color:#000000">What Others Are Saying</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 testimonial">
+        <p class="italic">"I completed 2 reviews and got paid the same day! This is legit."</p>
+        <p class="mt-4 font-bold">— Hailey, Sydney</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 testimonial">
+        <p class="italic">"I love how easy the steps are. Took just 10 minutes."</p>
+        <p class="mt-4 font-bold">— Bella, Illinois</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded shadow text-gray-900 testimonial">
+        <p class="italic">"Wish I found out about it sooner. Highly recommend!"</p>
+        <p class="mt-4 font-bold">— Layla, Melbourne</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 px-6 bg-white text-center">
+    <h2 class="text-2xl font-semibold mb-4" style="color:#000000">Need Help?</h2>
+    <p class="mb-6">Reach out to our team if you have questions about how to start.</p>
+    <a href="https://uplevelrewarded.com/aff_c?offer_id=76&aff_id=158919"
+       class="inline-block text-white px-6 py-3 rounded font-medium button-hover"
+       style="background:#000000">
+       Contact Support
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-6 bg-white border-t-2">
+    <p class="text-sm text-gray-900">© 2025 SHEIN</p>
+  </footer>
+</body>
+</html>
